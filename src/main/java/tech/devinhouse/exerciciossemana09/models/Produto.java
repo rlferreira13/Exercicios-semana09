@@ -24,7 +24,7 @@ public class Produto {
     @Column(nullable = false)
     private String descricao;
 
-    @Column(nullable = false, name = "valor_unitario")
+    @Column(nullable = false, name="valor_unitario")
     private double valorUnitario;
 
 
