@@ -18,11 +18,10 @@ public class ProdutoService {
     }
 
     public Produto save(Produto produto) throws Exception {
-        List <Produto> listaprodutos = produtoRepository.findAll();
-        if (produto.getValorUnitario() < 0 || listaprodutos.toString().contains(produto.getSku())){
+        List<Produto> listaprodutos = produtoRepository.findAll();
+        if (produto.getValorUnitario() < 0 || listaprodutos.toString().contains(produto.getSku())) {
             throw new Exception("Erro: Valor unitário não pode ser menor que 0 e o SKU é um valor único.");
-        }
-        else{
+        } else {
             return produtoRepository.save(produto);
 
         }

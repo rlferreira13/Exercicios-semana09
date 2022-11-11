@@ -6,8 +6,8 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "produto")
-public class Produto {
+@Table(name = "cliente")
+public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -15,17 +15,10 @@ public class Produto {
     @Column(nullable = false)
     private Boolean ativo;
 
-    @Column(nullable = false, unique = true)
-    private String sku;
-
     @Column(nullable = false)
     private String nome;
 
-    @Column(nullable = false)
-    private String descricao;
-
-    @Column(nullable = false, name = "valor_unitario")
-    private double valorUnitario;
-
+    @Column(nullable = false, name="cpf_cnpj")
+    private String cpfCnpj;
 
 }
